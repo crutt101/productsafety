@@ -1,5 +1,7 @@
 # ToxiScan
 
+**Live site: https://crutt101.github.io/productsafety/**
+
 Scan any food barcode and get a **toxicity score out of 100** — flagging possible
 carcinogens, additives banned in other countries, and glyphosate risk. Includes a
 special report on **glyphosate in bread**, built from third-party lab data.
@@ -27,15 +29,14 @@ E-codes (`additives_tags`).
 
 ## Running it
 
-Static site — no build step. Serve the folder over HTTPS (camera access requires
-a secure context):
+Deployed to **GitHub Pages** from the `gh-pages` branch; the
+`.github/workflows/deploy-pages.yml` workflow re-publishes it on every push.
+
+For local development (camera access needs HTTPS or localhost):
 
 ```bash
 npx serve .        # or python3 -m http.server
 ```
-
-Or enable **GitHub Pages** on this repo (Settings → Pages → deploy from branch)
-and it works as-is.
 
 ## Tech
 
