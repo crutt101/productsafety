@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barcode Scanner — ToxiScan</title>
+<meta name="description" content="Scan a food barcode with your camera and get an instant toxicity score out of 100.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9763;&#65039;</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M16 2 28 9v14l-12 7L4 23V9l12-7z" stroke="#a3e635" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="16" cy="16" r="4.5" fill="#a3e635"/>
+      </svg>
+      Toxi<em>Scan</em>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="scanner.html" class="active">Scanner</a>
+      <a href="bread.html">Bread &amp; Glyphosate</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="scan-layout">
+
+    <div class="scan-panel">
+      <h2>Scan a product</h2>
+      <p class="hint">Use your camera on any EAN/UPC barcode, type the digits, or paste an ingredient list. Camera scanning needs HTTPS and camera permission.</p>
+
+      <div id="reader"></div>
+      <button class="btn btn-primary" id="start-scan" style="width:100%;justify-content:center;margin-top:14px">Start camera scan</button>
+
+      <div class="divider">or type the barcode</div>
+      <div class="field-row">
+        <input type="text" id="barcode-input" inputmode="numeric" placeholder="e.g. 3017620422003" aria-label="Barcode digits">
+        <button class="btn btn-ghost" id="lookup-btn">Look&nbsp;up</button>
+      </div>
+      <div class="demo-row">
+        <button class="btn btn-ghost" data-demo-barcode="3017620422003">Try: Nutella</button>
+        <button class="btn btn-ghost" data-demo-barcode="5449000000996">Try: Coca-Cola</button>
+        <button class="btn btn-ghost" data-demo-barcode="737628064502">Try: Pad Thai kit</button>
+      </div>
+
+      <div class="divider">or paste ingredients</div>
+      <textarea id="ingredients-input" placeholder="Paste the ingredient list from any label…"></textarea>
+      <div class="field-row" style="margin-top:10px">
+        <button class="btn btn-primary" id="analyze-btn" style="flex:1;justify-content:center">Analyze ingredients</button>
+        <button class="btn btn-ghost" id="demo-paste">Demo</button>
+      </div>
+
+      <div class="status-msg" id="scan-status"></div>
+    </div>
+
+    <div class="result-panel" id="result">
+      <div class="result-empty">
+        <span class="glyph">
+          <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 8v8M11 8v8M15 8v8M18 8v8"/></svg>
+        </span>
+        Scan or look up a product and its toxicity breakdown will appear here.<br>
+        Products are matched against a database of 40+ hazardous additives.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Disclaimer:</strong> Scores reflect published hazard classifications (IARC, FDA, EFSA, NTP) and international regulatory status — informational only, not medical advice. Product data from <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> (ODbL); ingredient lists there are crowdsourced and may be incomplete or out of date. Always check the physical label.</p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="js/toxins.js"></script>
+<script src="js/score.js"></script>
+<script src="js/scanner.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bread &amp; Glyphosate — ToxiScan</title>
+<meta name="description" content="Every third-party lab report on glyphosate in bread, in one sortable table: Florida DOH 2026, The Detox Project × Mamavation, and more — brand by brand, in ppb.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9763;&#65039;</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M16 2 28 9v14l-12 7L4 23V9l12-7z" stroke="#a3e635" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="16" cy="16" r="4.5" fill="#a3e635"/>
+      </svg>
+      Toxi<em>Scan</em>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="scanner.html">Scanner</a>
+      <a href="bread.html" class="active">Bread &amp; Glyphosate</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="padding-bottom:24px">
+  <div class="wrap">
+    <span class="kicker">Special report</span>
+    <h1>Bread &amp; <em>Glyphosate</em></h1>
+    <p class="sub">Every third-party lab test on glyphosate in retail bread we could find, brand by brand, in parts per billion.</p>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stat-strip" id="bread-stats"></div>
+</div>
+
+<section class="block">
+  <div class="wrap prose">
+    <h2>Why is a weed killer in bread?</h2>
+    <p><strong>Glyphosate</strong> is the active ingredient in Roundup and the most heavily used herbicide in history. It ends up in bread not through GMO wheat (there is none on the market) but through <strong>pre-harvest desiccation</strong> — spraying wheat and oats shortly before harvest to dry the crop for earlier, more uniform harvesting. Residues on the grain survive milling and baking.</p>
+    <p>In 2015 the WHO's International Agency for Research on Cancer classified glyphosate as <strong>Group 2A — "probably carcinogenic to humans."</strong> The US EPA disagrees and considers it unlikely to be carcinogenic at dietary levels; Bayer has nonetheless paid billions to settle Roundup cancer lawsuits. Whole-wheat breads tend to test higher than white breads because residues concentrate in the bran.</p>
+    <h3>How to read the numbers</h3>
+    <ul>
+      <li><strong>10 ppb</strong> — typical lab detection limit (LC-MS/MS); "ND" means below this.</li>
+      <li><strong>160 ppb</strong> — EWG's child-protective health benchmark. Several popular breads exceed it.</li>
+      <li><strong>10,000 ppb (10 ppm)</strong> — EU maximum residue level for wheat grain.</li>
+      <li><strong>30,000 ppb (30 ppm)</strong> — US EPA tolerance for wheat grain. Every bread ever tested is far below this, so all of these products are legal.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="block tinted">
+  <div class="wrap">
+    <span class="kicker">Sources</span>
+    <h2>The lab reports</h2>
+    <p class="lead">All figures below come from these three independent testing programs. Follow the links for the original reports and methodology.</p>
+    <div class="source-cards" id="bread-sources"></div>
+
+    <h2 style="margin-top:20px">All tested breads</h2>
+    <p class="lead">Search, filter by report, and sort. Levels in parts per billion (ppb); ND = none detected.</p>
+    <div class="table-tools">
+      <input type="text" id="bread-search" placeholder="Search brand or product…" aria-label="Search breads">
+      <select id="bread-source" aria-label="Filter by report">
+        <option value="all">All reports</option>
+        <option value="fl2026">Florida DOH 2026</option>
+        <option value="detox">Detox Project × Mamavation</option>
+        <option value="sour2026">Mamavation Sourdough 2026</option>
+      </select>
+      <select id="bread-sort" aria-label="Sort">
+        <option value="high">Highest glyphosate first</option>
+        <option value="low">Lowest first</option>
+        <option value="brand">Brand A–Z</option>
+      </select>
+    </div>
+    <div class="bread-table-wrap">
+      <table class="bread-table">
+        <thead>
+          <tr><th>Brand / Product</th><th>Glyphosate (ppb)</th><th></th><th>Verdict</th><th>Report</th></tr>
+        </thead>
+        <tbody id="bread-tbody"></tbody>
+      </table>
+    </div>
+    <div class="benchmark-note" style="margin-top:20px">
+      <strong>Also on the record:</strong> Moms Across America's 2023 fast-food testing found glyphosate in <a href="https://www.momsacrossamerica.com/lab-reports/fast-food-glyphosate" target="_blank" rel="noopener">100% of the top-20 fast-food brands sampled</a> — with the highest levels in Panera Bread sandwich samples (up to 225.5 ppb) and Arby's (up to 124.2 ppb).
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap prose">
+    <h2>Lowering your glyphosate exposure</h2>
+    <p>Patterns across all three reports:</p>
+    <ul>
+      <li><strong>Certified organic usually — but not always — tests lower.</strong> Glyphosate is prohibited in organic farming, yet drift and cross-contamination happen: 365 Organic Artisan Sourdough still tested at 23 ppb. Organic breads that tested ND include Rudi's Organic Rocky Mountain Sourdough and Dave's Killer Bread Organic Sprouted Thin-Sliced.</li>
+      <li><strong>Sprouted-grain breads were consistently among the lowest</strong> (Angelic Bakehouse 12 ppb, Silver Hills ND).</li>
+      <li><strong>Conventional 100% whole wheat was consistently the worst category</strong> — residues ride on the bran that white flour discards.</li>
+      <li><strong>White breads are a mixed bag:</strong> Wonder Classic White hit 173 ppb while Sara Lee Artesano and Pepperidge Farm Farmhouse White were ND in the same Florida report.</li>
+    </ul>
+    <p>Want to check what else is in your loaf? <a href="scanner.html">Scan it</a> — the scanner also flags non-organic wheat as a glyphosate risk automatically.</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Disclaimer:</strong> All data reproduced from the cited third-party reports; ToxiScan did not conduct testing. Single-sample tests of single lots — levels vary by batch, region and harvest. Every level shown is below current US EPA tolerances; whether that margin is protective is a matter of active scientific and legal dispute. Not medical advice.</p>
+  </div>
+</footer>
+
+<script src="js/breads.js"></script>
+<script src="js/bread-page.js"></script>
+</body>
+</html>

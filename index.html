@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToxiScan — Scan it before you eat it</title>
+<meta name="description" content="Scan any food barcode and get a toxicity score out of 100 — carcinogens, banned-abroad additives, and glyphosate lab data for popular breads.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9763;&#65039;</text></svg>">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 32 32" fill="none">
+        <path d="M16 2 28 9v14l-12 7L4 23V9l12-7z" stroke="#a3e635" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="16" cy="16" r="4.5" fill="#a3e635"/>
+      </svg>
+      Toxi<em>Scan</em>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="scanner.html">Scanner</a>
+      <a href="bread.html">Bread &amp; Glyphosate</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Scan it before<br>you <em>eat it.</em></h1>
+    <p class="sub">Point your camera at any food barcode and get a toxicity score out of 100 — flagging possible carcinogens, additives banned in other countries, and glyphosate risk.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="scanner.html">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2M7 8v8M11 8v8M15 8v8M18 8v8"/></svg>
+        Scan a barcode
+      </a>
+      <a class="btn btn-ghost" href="bread.html">Bread glyphosate report</a>
+    </div>
+  </div>
+</section>
+
+<section class="block tinted" id="top-breads-section">
+  <div class="wrap">
+    <span class="kicker">Independent lab data</span>
+    <h2>Top toxic breads</h2>
+    <p class="lead">The highest glyphosate levels found in retail breads across three third-party lab reports — the Florida Department of Health (2026), The Detox Project × Mamavation, and Mamavation's 2026 sourdough investigation.</p>
+    <div class="leaderboard" id="top-breads"></div>
+    <div class="benchmark-note">
+      <strong>Context:</strong> EWG's child-protective health benchmark is <strong>160 ppb</strong>. All levels above are far below the US EPA legal tolerance for wheat (30,000 ppb) — legal, but not necessarily what you want in a sandwich. Full data, sources and methodology on the <a href="bread.html">Bread &amp; Glyphosate page</a>.
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="kicker">How scoring works</span>
+    <h2>One number. Real criteria.</h2>
+    <p class="lead">Every product starts at 100. We deduct points for each ingredient in our hazard database, weighted by the strength of the evidence against it.</p>
+    <div class="card-grid">
+      <div class="card">
+        <span class="big-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+        </span>
+        <h3>Carcinogen check</h3>
+        <p>Ingredients classified by IARC (Groups 1, 2A, 2B) or flagged by the US National Toxicology Program — potassium bromate, Red 3, BHA, aspartame, titanium dioxide and more.</p>
+      </div>
+      <div class="card">
+        <span class="big-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4.9 4.9l14.2 14.2"/></svg>
+        </span>
+        <h3>Banned elsewhere</h3>
+        <p>Additives that are legal in the US but banned or restricted in the EU, UK, Japan, Canada and beyond — azodicarbonamide, BVO, bleached flour, propylparaben and friends.</p>
+      </div>
+      <div class="card">
+        <span class="big-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+        </span>
+        <h3>Score out of 100</h3>
+        <p>Severity-weighted deductions produce a single score and letter grade, plus a highlighted ingredient list so you can see exactly what triggered each flag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tinted">
+  <div class="wrap" style="text-align:center">
+    <h2 style="margin-bottom:14px">Ready to check your pantry?</h2>
+    <p class="lead" style="margin:0 auto 26px">Works with any EAN/UPC barcode via the Open Food Facts database — or paste an ingredient list directly.</p>
+    <a class="btn btn-primary" href="scanner.html">Open the scanner</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p><strong>Disclaimer:</strong> ToxiScan is an informational tool, not medical advice. Scores reflect published hazard classifications (IARC, FDA, EFSA, NTP) and international regulatory status, not a measured risk for any individual. Glyphosate figures come from the cited third-party lab reports; all reported levels are below current US EPA tolerances.</p>
+    <p>Product data courtesy of <a href="https://world.openfoodfacts.org" target="_blank" rel="noopener">Open Food Facts</a> (ODbL). Bread lab data: <a href="https://www.food-safety.com/articles/11118-floridas-latest-food-contaminant-testing-report-focuses-on-glyphosate-in-bread" target="_blank" rel="noopener">Florida DOH 2026</a>, <a href="https://mamavation.com/food/glyphosate-bread-oats-legumes-protein-powders-bars.html" target="_blank" rel="noopener">The Detox Project × Mamavation</a>, <a href="https://mamavation.com/food/sourdough-bread-glyphosate.html" target="_blank" rel="noopener">Mamavation Sourdough 2026</a>.</p>
+  </div>
+</footer>
+
+<script src="js/breads.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
